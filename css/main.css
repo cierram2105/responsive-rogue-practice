@@ -1,13 +1,3 @@
-/**********BASE STYLES POST MOBILE FIRST**********/
-
-html {
-	font-size: 16px;
-}
-
-body {
-	font-size: 1em;
-}
-
 /******************** LOOK HERE!!!! I THINK I need to put ALL of my currently-labeled "Mobile styling" that come before the module stylings into the module stylings. EVERYTHING needs to be categorized in the modules, and I just need to change the pxs to ems. THEN I change what needs to be changed for tablet and desktop. TRY THAT!!!********************/
 
 /**********START OF MOBILE STYLING FIRST**********/
@@ -17,8 +7,15 @@ body {
 	src: url('../fonts/wisdom-script.otf') format('opentype');
 }
 
+/**********BASE STYLES POST MOBILE FIRST**********/
+
+html {
+	font-size: 16px;
+}
+
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-size: 1em;
 }
 
 .container{
@@ -38,7 +35,7 @@ h1 {
 	font-size: 1.875em;
 }
 h2 {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 h3 {
 	font-size: 1.125em;
@@ -53,139 +50,47 @@ p {
   padding: 0 1.875em;
 }
 
-/*****MOBILE HEADER*****/
+/**********BASE STYLES POST MOBILE FIRST ENDS**********/
+
+/**********HEADER MODULE**********/
 
 header {
-	border-bottom: 3px solid #77a466;
-	margin: 0 auto;
-	text-align: center;
-}
+	 font-size: .875em;
+ 	 margin: 0 auto;
+ 	 text-align: center;
+ }
 
 header h1 {
+	font-size: 2.15em;
+	padding: 1.25em 0 .5em;
 	margin: 0;
-	padding: 38px 0;
 	border-bottom: 3px solid #77a466;
 }
+
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
 	padding: 46px 0;
+	display: block;
 }
+
 header nav ul {
 	margin: 0;
 	padding: 0;
-}
-header nav ul li {
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 14px;
-	padding: 10px 0;
-}
-header nav ul li a{
-	text-decoration: none;
-	color:#77a466;
-}
-
-/**********MOBILE TOP SECION**********/
-
-.top-section,
-.bottom-section {
-	margin: 0 auto;
-}
-
-.main-image {
-	height: auto;
-}
-.main-image img {
-	width: 100%;
-	border-bottom: 3px solid #77a466;
-}
-
-.main-title {
-	height: auto;
-}
-.main-title h3 {
-	text-align: left;
-	padding: 5px 0;
-	color: #77a466;
-}
-.main-title p {
-	padding: 0;
-	font-size: 16px;
-	line-height: 25px;
-}
-
-/********** MOBILE BOTTOM SECTION**********/
-
-.section-one,
-.section-two,
-.section-three {
-	width: 100%;
-	height: auto;
-	border-top: 1px solid #eee;
-}
-
-.section-one h4, .section-two h4, .section-three h4 {
-	padding: 10px 0;
-}
-
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}
-
-.menu {
-	list-style: none;
-	padding: 0;
-}
-.menu li {
-	padding: 10px 0;
-	color:#77a466;
-}
-
-.reviews {
-	color: #333;
-	font-size: 16px;
-	line-height: 21px;
-	padding: 0;
-}
-
-.address {
-	font-size: 16px;
-	line-height: 24px;
-	padding: 0;
-}
-
-/********** MOBILE FOOTER**********/
-
-footer {
-	height: 50px;
-	border-top: 3px solid #eee;
-	margin: 0 auto;
-	text-align: center;
-}
-footer span {
-	font-family: 'Wisdom Script', cursive;
-	text-transform: lowercase;
-	color: #77a466;
-	font-size: 14px;
-}
-
-/**********HEADER MODULE**********/
- header {
-	 font-size: .875em;
- }
-
-header h1 {
-	font-size: 2.15em;
-	padding: 1.25em 0 .5em;
 }
 
 header nav ul li {
 	font-size: 1em;
 	padding: 1em .625em;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+header nav ul li a{
+	text-decoration: none;
+	color:#77a466;
 }
 
 /**********TOP SECTION MODULE**********/
@@ -203,10 +108,40 @@ header nav ul li {
 	font-size: 1em;
 }
 
+.top-section,
+.bottom-section {
+	margin: 0 auto;
+}
+
+.top-section .main-image img {
+	width: 100%;
+	border-top: 3px solid #77a466;
+	border-bottom: 3px solid #77a466;
+}
+
+.top-section .main-title h3 {
+	text-align: left;
+	padding: 5px 0;
+	color: #77a466;
+}
+
+.top-section .main-title p {
+	padding: 0;
+	font-size: 1em;
+	line-height: 25px;
+}
+
 /**********BOTTOM SECTION MODULE**********/
 
 .bottom-section {
 	font-size: 1em;
+}
+
+.bottom-section .section-one,
+.bottom-section .section-two,
+.bottom-section .section-three {
+	width: 100%;
+	border-top: 1px solid #eee;
 }
 
 .bottom-section .section-one h4, .section-two h4, .section-three h4 {
@@ -214,26 +149,45 @@ header nav ul li {
 	padding: .625em 0;
 }
 
-.section-two .menu ul {
+.bottom-section .section-two {
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+}
+
+.bottom-section .menu {
+	list-style: none;
+	padding: 0;
+	color:#77a466;
+}
+
+.bottom-section .section-two .menu ul {
 	font-size: .75em;
 }
 
-.section-two .menu li {
+.bottom-section .section-two .menu li {
 	padding: 10px 0;
 }
 
-.section-two .reviews {
+.bottom-section .section-two .reviews {
 	font-size: 1em;
+	color: #333;
+	line-height: 21px;
+	padding: 0;
 }
 
-.section-two .address {
+.bottom-section .section-two .address {
 	font-size: 1em;
+	line-height: 24px;
+	padding: 0;
 }
 
 /**********FOOTER MODULE***********/
 
 footer {
 	font-size: .875em;
+	border-top: 3px solid #eee;
+	margin: 0 auto;
+	text-align: center;
 }
 
 footer h4 {
@@ -242,6 +196,63 @@ footer h4 {
 
 footer span {
 	font-size: 1em;
+	font-family: 'Wisdom Script', cursive;
+	text-transform: lowercase;
+	color: #77a466;
+}
+
+/**********MEDIA QUERIES**********/
+
+@media all and (min-width:768px) {
+    /* Tablet styles here */
+
+		.top-section,
+		.bottom-section {
+			margin: 0 auto;
+			clear: both;
+		}
+
+		.bottom-section .section-one, .bottom-section .section-two, .bottom-section .section-three {
+			width: 33%;
+			border-top: 1px solid #eee;
+			float: left;
+		}
+
+		footer {
+			clear: both;
+		}
+
+}
+
+@media all and (min-width:940px) {
+    /* Desktop styles here */
+
+		header {
+			 width: 100%;
+		 	 text-align: left;
+		 }
+
+		header h1 {
+			width: 50%;
+			font-size: 2.15em;
+			padding: 1.25em 0 .5em;
+			margin: 0;
+			float: left;
+			border-bottom: none;
+		}
+
+		header nav {
+			width: 50%;
+			float: right;
+			padding: 3.286em 0;
+			list-style: none;
+		}
+
+		header nav ul li {
+			display: inline;
+			padding: 1em 0 1em .857em;
+		}
+
 }
 
 /*****DESKTOP STYLES THAT WERE GIVEN TO US*****/
